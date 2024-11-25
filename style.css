@@ -1,0 +1,102 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic body and html styling */
+body,
+html {
+  height: 100%;
+  width: 100%;
+  /* Gradient background */
+  background-image: radial-gradient(circle at center center, rgb(234, 238, 79), rgb(250, 124, 72));
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Add padding to the body */
+body {
+  padding: 5% 3%;
+}
+
+/* Styling for the main title */
+#title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  /* Add a subtle text glow */
+  text-shadow: 0 0 10px #fff;
+}
+
+/* Accordion container styling */
+.accordion {
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Space between accordion items */
+.accordion-item {
+  margin-bottom: 1rem;
+}
+
+/* Styling for the clickable header */
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px #fff;
+}
+
+/* Icon wrapper for positioning */
+.icon-wrapper {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+/* Positioning and transition for plus and minus icons */
+.icon-plus,
+.icon-minus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Hide minus icon by default */
+.icon-minus {
+  opacity: 0;
+}
+
+/* Styling for accordion content */
+.accordion-content {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  box-shadow: 0 0 10px #fff;
+  margin-top: -0.5rem;
+  display: none;
+}
+
+/* Show content when active */
+.accordion-content.active {
+  display: block;
+}
+
+/* Hide plus icon when accordion is active */
+.accordion-header.active .icon-plus {
+  opacity: 0;
+}
+
+/* Show minus icon when accordion is active */
+.accordion-header.active .icon-minus {
+  opacity: 1;
+}
